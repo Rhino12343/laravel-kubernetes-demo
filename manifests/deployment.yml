@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "kubedev-90c2"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "kubedev-90c2"
+    spec:
+      containers:
+        - name: "kubedev-90c2"
+          image: "kubedevacr.azurecr.io/kubedev"
+          ports:
+          - containerPort: 80
