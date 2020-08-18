@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "aksdevapp-50af"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "aksdevapp-50af"
+    spec:
+      containers:
+        - name: "aksdevapp-50af"
+          image: "aksdevcr.azurecr.io/aksdevapp"
+          ports:
+          - containerPort: 80
